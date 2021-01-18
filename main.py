@@ -3,12 +3,8 @@ import requests
 from flask import Flask, json, request, jsonify, Response
 from flask_restful import Api, Resource, reqparse
 
-from dotenv import load_dotenv
-
 app = Flask(__name__)
 api = Api(app)
-
-load_dotenv(verbose=True)
 
 headers = {
     "X-NCP-APIGW-API-KEY-ID":os.environ.get("NCLOUD_MAP_CLIENT_ID"),
